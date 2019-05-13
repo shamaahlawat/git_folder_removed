@@ -1,0 +1,5 @@
+//animation is imported below the commom.scss  so mixins and colors will already avaliable for it
+
+@import "./common.scss";
+@import "./animation.scss";
+@import "./overrides.scss";

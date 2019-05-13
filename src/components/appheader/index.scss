@@ -1,0 +1,80 @@
+@import "../../data/styles/colors.scss";
+@import "../../data/styles/variables.scss";
+@import "../../data/styles/mixins.scss";
+
+.oriAppHeaderContainer {
+    color: $dashboard-header-font;
+
+    .headerIconContainer {
+        height: 100%;
+        width: 70px;
+    }
+
+    .headerContentContainer {
+        .navList {
+            list-style-type: none;
+            line-height: 58px;
+
+            .searchContainer {
+                max-width: 200px;
+                min-width: 100px;
+                cursor: default !important;
+            }
+
+            .navItem {
+                @include lr-padding(10px);
+
+                display: inline-block;
+                border-bottom: 2px solid transparent;
+                cursor: pointer;
+
+                .searchBox {
+                    .ant-input-suffix {
+                        right: unset !important;
+                        left: 8px !important;
+                        font-size: 16px !important;
+                        color: $dashboard-header-font !important;
+                    }
+
+                    .ant-input {
+                        border: none !important;
+                        font-size: 14px !important;
+                        color: $dashboard-header-font-dark !important;
+
+                        &:focus, &:hover, &:active {
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+
+                        &:not(:last-child) {
+                            padding-left: 35px !important;
+                            padding-right: 0px !important;
+                        }
+                    }
+                }
+
+                .badgeAlign {
+                    .material-icons {
+                        color: $dashboard-header-font-light !important;
+                    }
+
+                    .ant-badge-dot {
+                        background-color: $green !important;
+                        top: 2px !important;
+                        left: 5px;
+                        height: 5px !important;
+                        width: 5px !important;
+                    }
+                }
+
+                .ant-switch-checked {
+                    background-color: $green !important;
+                }
+
+                .status {
+                    color: $dashboard-header-font-dark;
+                }
+            }
+        }
+    }
+}

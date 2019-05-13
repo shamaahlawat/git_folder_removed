@@ -1,0 +1,82 @@
+@import "../../../../../../data/styles/colors.scss";
+@import "../../../../../../data/styles/variables.scss";
+
+.oriConversationListContainer {
+    .filterTagContainer {
+        min-height: 60px;
+        max-height: 22vh;
+        overflow: auto;
+
+        .alignTitle {
+            top: 19px;
+            left: 12px;
+            right: 70px;
+        }
+
+        .alignIcon {
+            top: 15px;
+            right: 5px;
+            font-size: 18px;
+
+            &:hover {
+                color: $font-color !important;
+            }
+        }
+
+        .alignFilter {
+            top: 15px;
+            right: 0px;
+            font-size: 18px;
+
+            .title {
+                font-size: 9px;
+            }
+
+            &:hover {
+                color: $font-color !important;
+            }
+        }
+    }
+
+    .accordianContainer {
+        .filterWrapper {
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 11;
+
+            .filterOptionContainer {
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .ant-collapse {
+            font-family: $font-family-primary;
+
+            .conversationPanel {
+                border-color: transparent;
+
+                .ant-collapse-header {
+                    color: $font-color !important;
+                    padding: 15px 10px 15px 27px;
+                    border-bottom: 1px solid $border-light;
+
+                    .arrow {
+                        line-height: 51px;
+                        left: 8px;
+                    }
+                }
+
+                .ant-collapse-content {
+                    padding: 0px;
+
+                    .ant-collapse-content-box {
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

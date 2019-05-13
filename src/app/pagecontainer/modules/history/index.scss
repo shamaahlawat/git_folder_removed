@@ -1,0 +1,26 @@
+@import "../../../../data/styles/colors";
+
+@media only screen and (max-width: 767px) {
+    .oriChatHistoryContainer {
+        position: relative;
+
+        .chatInterfaceContainer {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            right: 0;
+            z-index: 125;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .oriChatHistoryContainer {
+        height: calc(100vh - 60px) !important;
+        overflow: hidden;
+
+        .chatInterfaceContainer {
+            height: 100%;
+        }
+    }
+}

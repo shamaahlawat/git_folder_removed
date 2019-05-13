@@ -1,0 +1,39 @@
+@import "../../../../data/styles/variables.scss";
+@import "../../../../data/styles/colors.scss";
+
+.oriFiltersContainer {
+    .ant-collapse {
+        .inputNumberContainer {
+            .title {
+                line-height: 24px;
+            }
+
+            .inputBox {
+                width: 65px;
+            }
+        }
+
+        .filterPanel {
+            border-color: $border-light !important;
+
+            .ant-collapse-header {
+                color: $font-color !important;
+                padding: 15px 27px 15px 15px !important;
+                border: none !important;
+
+                .arrow {
+                    left: unset !important;
+                    right: 12px;
+                }
+            }
+
+            .ant-collapse-content {
+                padding: 0px;
+
+                .ant-collapse-content-box {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../../../data/styles/mixins.scss';
+
+.oriProfileCardLoaderContainer{
+    .avatarLoader {
+        @include create-circle(55px, 55px);
+    }
+
+    .width-100 {
+        width: 100px;
+    }
+
+    .description {
+        width: 120px;
+    }
+}

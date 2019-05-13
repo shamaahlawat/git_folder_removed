@@ -1,0 +1,78 @@
+@import "../../../data/styles/colors";
+@import "../../../data/styles/mixins";
+
+@media only screen and (max-width: 767px) {
+    .oriLoginContainer {
+        .loginFormContainer {
+            .oriLogo {
+                height: 40px;
+            }
+
+            .loginForm {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .oriLoginContainer {
+        .loginContentContainer {
+            border-radius: 5px;
+
+            .loginFormContainer {
+                .oriLogo {
+                    height: 50px;
+                }
+
+                .loginForm {
+                    padding: 20px;
+                }
+            }
+        }
+
+        .loginContentLandscape {
+            width: 83%;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+    }
+}
+
+.oriLoginContainer {
+    background-color: $default;
+
+    .loginContentContainer {
+        background-color: $white;
+    }
+
+    .loginContentLandscape {
+        .loginFormContainer {
+            width: 50%;
+        }
+
+        .loginImageContainer {
+            width: 50%;
+        }
+    }
+
+    .loginContentPortrait {
+        .loginFormContainer {
+            width: 100%;
+        }
+
+        .loginImageContainer {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

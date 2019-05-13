@@ -1,0 +1,31 @@
+@import "../../../../data/styles/mixins.scss";
+@import "../../../../data/styles/colors.scss";
+
+.oriProfileCardContainer {
+    .profileAvatar {
+        @include create-box(65px, 65px);
+
+        line-height: 65px;
+    }
+
+    .avatarBadge {
+        bottom: -9px;
+        left: calc(50% - 9px);
+
+        .iconBadge {
+            @include create-box(18px, 18px);
+        }
+    }
+
+    .botEventItem {
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    .rotateIcon {
+        transform: rotate(120deg);
+    }
+}

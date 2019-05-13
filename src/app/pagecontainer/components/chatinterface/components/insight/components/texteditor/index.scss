@@ -1,0 +1,16 @@
+.oriTextEditorContainer {
+    .textContent {
+        resize: none !important;
+    }
+    .textContainer {
+        padding: 2px 8px;
+        min-height: 24px;
+    }
+
+    .overlapOnInput {
+        top: 0;
+        left: 0;
+        color: transparent;
+        pointer-events: none;
+    }
+}

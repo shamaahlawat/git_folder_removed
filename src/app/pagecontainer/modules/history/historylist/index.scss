@@ -1,0 +1,109 @@
+@import "../../../../../data/styles/colors.scss";
+
+.oriHistoryListContainer {
+    .historyHeaderContainer {
+        min-height: 60px;
+        max-height: 22vh;
+        overflow: auto;
+        padding: 15px 38px 7px 10px;
+
+        
+
+        .alignHeaderIcon {
+            .title {
+                font-size: 9px;
+            }
+
+            &:hover {
+                color: $font-color !important;
+            }
+        }
+
+        .alignFilter {
+            top: 18px;
+            right: 0px;
+
+            .historyBadge{
+                .ant-badge-count {
+                    background-color: $green;
+                    font-size: 10px;
+                    height: 13px;
+                    line-height: 13px;
+                    padding: 0 4px !important;
+                }
+            }
+        }
+
+        .alignClose {
+            top: 23px;
+            right: 5px;
+            font-size: 14px;
+        }
+
+        .rangePickerContainer {
+            .ant-input {
+                border: none !important;
+                padding-left: 18px;
+                padding-right: 0px;
+
+                .ant-calendar-range-picker-input {
+                    font-size: 12px;
+                    border: 1px solid $border-light;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    border-radius: 15px;
+                    background-color: $default;
+                    color: $font-color;
+                }
+
+                .ant-calendar-range-picker-separator {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    width: unset !important;
+                }
+
+                .ant-calendar-picker-icon, .ant-calendar-picker-clear {
+                    right: unset !important;
+                    left: -2px;
+                    cursor: pointer;
+                }
+
+                .ant-calendar-picker-clear{
+                    display: none;
+                }
+            }
+
+            .ant-calendar-picker-input {
+                &:not(.ant-input-disabled) {
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .filterWrapper {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+
+        .filterOptionContainer {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    .alignNoHistoryFound {
+        bottom: 37%;
+        left: 0;
+        right: 0;
+    }
+}

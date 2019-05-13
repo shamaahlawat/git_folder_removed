@@ -1,0 +1,101 @@
+@import "../../../../../../data/styles/colors.scss";
+@import "../../../../../../data/styles/mixins.scss";
+
+.oriChatBodyContainer {
+    height: auto;
+
+    .msgContainer {
+        .msgAvatar {
+            overflow: hidden;
+        }
+
+        .msgBox {
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
+            word-break: break-word;
+            max-width: 360px;
+            font-size: 13px;
+
+            .default-entity {
+                background-color: $primary-bg-light;
+            }
+
+            .buttonsContainer {
+                .ori-mt-btn {
+                    color: $primary !important;
+                    height: auto !important;
+                    line-height: 1 !important;
+                    font-size: 10px;
+                    padding: 3px 8px;
+                    border-radius: 10px;
+                }
+
+                .ori-mt-btn-ghost {
+                    border: 1px solid $primary !important;
+
+                    &:hover, &:focus {
+                        background-color: $primary-bg-light !important;
+                        border: 1px solid transparent !important;
+                    }
+                }
+
+                .ori-mt-tag {
+                    background-color: $primary-bg-light !important;
+                    border: 1px solid transparent !important;
+                }
+            }
+        }
+    }
+
+    .receiverMsgContainer {
+        padding: 0px 35px 0px 35px;
+
+        .msgBox {
+            background-color: $primary;
+            color: $white;
+        }
+
+        .msgAvatar {
+            top: 10px;
+            left: -5px;
+        }
+
+        .firstMsg {
+            border-radius: 10px 10px 10px 2px;
+        }
+
+        .middleMsg {
+            border-radius: 1px 10px 10px 1px;
+        }
+
+        .lastMsg {
+            border-radius: 2px 10px 10px 10px;
+        }
+    }
+
+    .senderMsgContainer {
+        padding: 0px 35px 0px 35px;
+        width: 100%;
+        justify-content: flex-end;
+
+        .msgBox {
+            background-color: $white;
+        }
+
+        .msgAvatar {
+            top: 10px;
+            right: -5px;
+        }
+
+        .firstMsg {
+            border-radius: 10px 10px 2px 10px;
+        }
+
+        .middleMsg {
+            border-radius: 10px 1px 1px 10px;
+        }
+
+        .lastMsg {
+            border-radius: 10px 2px 10px 10px;
+        }
+    }
+}

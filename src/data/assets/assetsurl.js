@@ -1,0 +1,31 @@
+export const assets = {
+    loginBg: require('./img/login_bg.png'),
+    oriLogo: require('./img/ori_logo.png'),
+    messenger: require('./img/messenger.svg'),
+    chatInterface: require('./img/chat_interface.jpg'),
+    user: require('./img/user.png'),
+    userTyping: require('./img/typing_user.png'),
+    chatting: require('./img/chatting.png'),
+    person: require('./img/person.png'),
+    sad: require('./img/sad.png'),
+    chatbot: require('./img/chatbot.png'),
+};
+
+export const icons = {
+    Desktop: require('react-icons/lib/md/desktop-windows'),
+    LineChart: require('react-icons/lib/fa/line-chart'),
+    PieChart: require('react-icons/lib/fa/pie-chart'),
+    BarChart: require('react-icons/lib/fa/bar-chart'),
+    PaperPlane: require('react-icons/lib/io/ios-paperplane'),
+    Android: require('react-icons/lib/md/android'),
+    Apple: require('react-icons/lib/io/social-apple'),
+    Group: require('react-icons/lib/fa/group'),
+    User: require('react-icons/lib/fa/user'),
+    Star: require('react-icons/lib/fa/star-o'),
+    Table: require('react-icons/lib/fa/th'),
+    Message: require('react-icons/lib/md/message'),
+    DashboardMeter: require('react-icons/lib/go/dashboard'),
+    History: require('react-icons/lib/md/history'),
+    Conversation: require('react-icons/lib/fa/wechat'),
+    Repeat: require('react-icons/lib/md/repeat'),
+};

@@ -1,0 +1,47 @@
+@import "../../../../data/styles/colors";
+
+.oriConversationItemContainer {
+    border-top: 1px solid $border-light;
+
+    .avatarBadge {
+        .ant-badge-dot {
+            background-color: $green !important;
+            top: unset !important;
+            bottom: 1px;
+            right: -1px;
+            height: 5px !important;
+            width: 5px !important;
+        }
+
+        // .avatar {
+        //     .ant-avatar-string {
+        //         position: unset !important;
+        //         transform: scale(1) !important;
+        //         text-align: center;
+        //     }
+        // }
+    }
+
+    .lastMessage {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .iconContainer {
+        padding-top: 1px;
+
+        .messengerIcon {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &:first-child {
+        border-top-color: transparent;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid $border-light;
+    }
+}

@@ -1,0 +1,53 @@
+@import "./mixins.scss";
+
+$white: #ffffff;
+$black: #000000;
+$black-overlay-dark: rgba($black, 0.75);
+$black-overlay-light: rgba($black, 0.2);
+
+$primary: #5a51de;
+$primary-overlay: rgba($primary, 0.15);
+
+$default: #eff0f4;
+$font-color: #808080;
+$font-color-light: #b3b3b3;
+$border-light: #ebebeb;
+
+$font-white: $white;
+
+//----------- dashboard layout  specific color ----------
+
+$dashboard-header-bg: $white;
+$dashboard-header-font-light: #e6e6e6;
+$dashboard-header-font: #999999;
+$dashboard-header-font-dark: $font-color;
+$dashboard-sider-bg: #212734;
+$dashboard-sider-font: #d8dfe5;
+$dashboard-sider-font-light: #d8dfe580;
+
+//-------------- chatinterface specific color ---------------
+
+$chatinterface-header-bg: $white;
+$chatinterface-footer-bg: $white;
+
+$red: #FF0000 !default;
+$yellow: #ffcb00 !default;
+$green: #35cd4a !default;
+$info: #4da1ff !default;
+$success: #90b900 !default;
+$warning: #f5a623 !default;
+$danger: #ff6d4a !default;
+$magenta: #FF00FF !default;
+$violet: #9400D3 !default;
+
+$primary-bg: tint($primary, 20%);
+$green-bg: tint($green, 20%);
+
+$primary-bg-light: tint($primary, 85%);
+$green-bg-light: tint($green, 85%);
+$info-bg-light: tint($info, 85%);
+$success-bg-light: tint($success, 85%);
+$warning-bg-light: tint($warning, 85%);
+$danger-bg-light: tint($danger, 85%);
+
+$primary-dark: shade($primary, 15%);

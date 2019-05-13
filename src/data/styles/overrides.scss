@@ -1,0 +1,73 @@
+@import "./colors.scss";
+@import "./variables.scss";
+
+//--------------------------- BUTTONS ------------------------------
+
+.ori-btn-fill-primary {
+    color: $white !important;
+    background-color: $primary !important;
+    border-color: $primary !important;
+
+    &:hover, &:focus, &.active {
+        background-color: $primary-bg !important;
+        border-color: $primary-bg !important;
+    }
+}
+
+.ori-btn-fill-primary-light {
+    color: $primary !important;
+    background-color: $primary-bg-light !important;
+    border-color: $primary-bg-light !important;
+
+    &:hover, &:focus, &.active {
+        color: $white !important;
+        background-color: $primary-bg !important;
+        border-color: $primary-bg !important;
+    }
+}
+
+.ori-btn-ghost-primary {
+    color: $primary !important;
+    border: 1px solid $primary !important;
+
+    &:hover, &:focus {
+        background-color: $primary-bg-light !important;
+        border: 1px solid transparent !important;
+    }
+}
+
+//--------------------------- TAGS ------------------------------
+
+.ori-tag-primary {
+    color: $primary !important;
+    background-color: $white !important;
+    border: 1px solid $primary !important;
+    cursor: default !important;
+    height: auto !important;
+    line-height: unset !important;
+}
+
+//--------------------------- TOOLTIPS ------------------------------
+
+.ant-collapse, .ant-radio-group, .ant-radio-wrapper, .ant-radio {
+    font-family: $font-family-primary !important;
+}
+
+.entityTooltip, .intentTooltip {
+    .ant-tooltip-inner {
+        padding: 1px 4px;
+        min-height: 14px;
+        font-size: 11px;
+    }
+}
+
+.treeNodeTooltip{
+    .ant-tooltip-arrow {
+        display: none;
+    }
+
+    .ant-tooltip-inner {
+        background-color: $white;
+        color: $font-color;
+    }
+}

@@ -1,0 +1,96 @@
+/*
+Slightly lighten a color
+@access public
+@param {Color} $color - color to tint
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}
+*/
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+/*
+Slightly darken a color
+@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}
+*/
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+/*
+animation mixin: 
+eg: @include keyframes(slide-down) { 0% { opacity: 1; } 90% { opacity: 0; } } 
+@include animation('slide-down 5s 3');
+*/
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+//------------------------ common used mixin ----------------------
+
+@mixin create-box($height, $width) {
+    height: $height !important;
+    width: $width !important;
+}
+
+@mixin create-circle($height, $width) {
+    height: $height !important;
+    width: $width !important;
+    border-radius: 50% !important;
+}
+
+//------------------------- MIXINS for padding --------------------
+
+@mixin lr-padding($padding) {
+    padding-left: $padding !important;
+    padding-right: $padding !important;
+}
+
+@mixin tb-padding($padding) {
+    padding-top: $padding !important;
+    padding-bottom: $padding !important;
+}
+
+//------------------------- MIXINS for margin ----------------------
+
+@mixin lr-margin($margin) {
+    margin-left: $margin !important;
+    margin-right: $margin !important;
+}
+
+@mixin tb-margin($margin) {
+    margin-top: $margin !important;
+    margin-bottom: $margin !important;
+}

@@ -1,0 +1,70 @@
+@import "../../data//styles/colors.scss";
+
+.oriPageHeaderContainer {
+    min-height: 55px;
+    
+    .rangePickerContainer {
+        width: 190px;
+
+        .ant-input {
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 15px;
+            line-height: 18px;
+
+            .ant-calendar-range-picker-input {
+                font-size: 11px;
+            }
+
+            .ant-calendar-picker-icon {
+                cursor: pointer;
+
+                &::after {
+                    font-size: 12px;
+                }
+            }
+
+            .ant-calendar-picker-clear {
+                display: none;
+            }
+        }
+    }
+
+    .radioButtonSwitch {
+        font-size: 11px;
+
+        .ant-radio-button-wrapper {
+            line-height: 24px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:first-child {
+                border-radius: 15px 0px 0px 15px;
+            }
+
+            &:last-child {
+                border-radius: 0px 15px 15px 0px;
+            }
+        }
+
+        .ant-radio-button-wrapper-checked {
+            background-color: $primary;
+            color: $white;
+            border-color: $primary;
+        }
+    }
+
+    .selectPlatform {
+        font-size: 11px;
+        min-width: 80px;
+
+        .ant-select-selection {
+            border-radius: 15px;
+            padding-left: 3px;
+
+            .ant-select-selection__rendered {
+                line-height: 23px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "../../../../data/styles/colors";
+
+@media only screen and (max-width: 767px) {
+    .oriConversationContainer {
+        position: relative;
+
+        .conversationChatContainer {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            right: 0;
+            z-index: 125;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .oriConversationContainer {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+
+        .conversationChatContainer {
+            height: calc(100vh - 60px);
+            overflow: hidden;
+        }
+
+        .conversationProfileContainer {
+            height: calc(100vh - 60px);
+            overflow: auto;
+        }
+    }
+}
+
+.oriConversationContainer {
+    .conversationBodyContainer {
+        background-color: $white;
+    }
+}

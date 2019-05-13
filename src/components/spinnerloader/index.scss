@@ -1,0 +1,19 @@
+@import "../../data/styles/colors.scss";
+
+.spinnerLoaderContainer {
+    height: 100% !important;
+
+    .heightFull {
+        height: inherit !important;
+    }
+
+    .ant-spin {
+        color: $primary;
+
+        .ant-spin-dot {
+            i {
+                background-color: $primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import "../../../../data/styles/colors.scss";
+@import "../../../../data/styles/mixins.scss";
+
+.oriChatInterfaceContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .chatHeaderContainer {
+        height: 59px;
+        overflow: hidden;
+        background-color: $chatinterface-header-bg;
+
+        .profileAvatarContainer {
+            padding-top: 13px;
+            padding-right: 5px;
+
+            .title {
+                font-size: 15px;
+            }
+
+            .description {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .chatBodyContainer {
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-top: 2px;
+    }
+
+    .chatFooterContainer {
+        padding: 0px 15px 15px 15px;
+
+        .inputContainer {
+            min-height: 60px;
+            max-height: 110px;
+            background-color: $chatinterface-footer-bg;
+            padding: 10px 100px 10px 50px;
+
+            .chatIconContainer {
+                @include create-box(40px, 40px);
+
+                border: solid 1px #c3c3c380;
+            }
+
+            .alignAddIcon {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .alignSmileIcon {
+                bottom: 10px;
+                right: 60px;
+            }
+
+            .alignSendBtn {
+                bottom: 10px;
+                right: 10px;
+
+                @include create-box(40px, 40px);
+            }
+
+            .textInputField {
+                resize: none;
+                border: none;
+                background-color: $chatinterface-footer-bg !important;
+                color: $font-color;
+                min-height: 31px !important;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.chatInterfaceModal {
+    .ant-modal-close {
+        color: $white;
+
+        &:hover {
+            color: $font-color-light;
+        }
+    }
+
+    .ant-modal-header {
+        background-color: $primary;
+
+        .ant-modal-title {
+            color: $white;
+        }
+    }
+
+    .ant-modal-body {
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .insightSpecificModalClass {
+        width: 600px !important;
+    }
+}

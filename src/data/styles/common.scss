@@ -1,0 +1,879 @@
+@import "./colors.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+/*---------------------  BASE RULE FOR PROJECT  ---------------------*/
+
+html {
+    font-size: 62.5%;
+
+    ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: $default;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        background-color: $default;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: $font-color-light;
+    }
+}
+
+body {
+    font-family: $font-family-primary !important;
+    max-width: 100vw;
+    overflow-x: hidden;
+    color: $font-color !important;
+    font-size: 14px !important;
+    font-size: 1.4rem !important; //1.4rem with 62.5% font-size = 14px
+    background-color: $default !important;
+
+    p {
+        margin-bottom: 0px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0px;
+        color: $font-color;
+    }
+}
+
+/*-------------------------- COMMON CSS --------------------------*/
+
+.ori-loader-line-height {
+    line-height: 1.3 !important;
+}
+
+.ori-line-height-1 {
+    line-height: 1;
+}
+
+.ori-zindex-1 {
+    z-index: 1;
+}
+
+.ori-opacity-medium {
+    opacity: 0.6;
+}
+
+.ori-link-primary {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        color: $primary !important;
+    }
+}
+
+.ori-line-through {
+    text-decoration: line-through;
+}
+
+.ori-bg-white {
+    background-color: $white !important;
+}
+
+.ori-bg-default {
+    background-color: $default !important;
+}
+
+.ori-bg-black-light {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ori-bg-primary-light {
+    background-color: $primary-bg-light !important;
+}
+
+.ori-bg-primary-overlay {
+    background-color: $primary-overlay !important;
+}
+
+.ori-bg-green-light {
+    background-color: $green-bg-light;
+}
+
+.ori-bg-warning-light {
+    background-color: $warning-bg-light;
+}
+
+.ori-bg-info-light {
+    background-color: $info-bg-light;
+}
+
+.ori-bg-primary {
+    background-color: $primary !important;
+}
+
+.ori-bg-green {
+    background-color: $green !important;
+}
+
+.ori-bg-info {
+    background-color: $info !important;
+}
+
+.ori-bg-warning {
+    background-color: $warning !important;
+}
+
+.ori-bg-danger {
+    background-color: $danger !important;
+}
+
+.ori-bg-yellow {
+    background-color: $yellow !important;
+}
+
+.ori-bg-magenta {
+    background-color: $magenta !important;
+}
+
+.ori-bg-violet {
+    background-color: $violet !important;
+}
+
+.ori-bg-red {
+    background-color: $red !important;
+}
+
+.ori-font-primary {
+    color: $primary !important;
+}
+
+.ori-font-white {
+    color: $white;
+}
+
+.ori-font-green {
+    color: $green;
+}
+
+.ori-font-info {
+    color: $info;
+}
+
+.ori-font-warning {
+    color: $warning;
+}
+
+.ori-font-danger {
+    color: $red;
+}
+
+.ori-font-light {
+    color: $font-color-light !important;
+}
+
+.ori-text-center {
+    text-align: center !important;
+}
+
+.ori-cursor-ptr {
+    cursor: pointer !important;
+}
+
+.ori-capitalize {
+    text-transform: capitalize;
+}
+
+.ori-capitalize-first::first-letter {
+    text-transform: capitalize;
+}
+
+.ori-uppercase {
+    text-transform: uppercase;
+}
+
+.ori-width-md {
+    width: $font-size-md !important;
+}
+
+.ori-width-lg {
+    width: $font-size-lg !important;
+}
+
+.ori-width-70 {
+    width: 70px;
+}
+
+.ori-quarter-width {
+    width: 25% !important;
+}
+
+.ori-half-width {
+    width: 50% !important;
+}
+
+.ori-full-width {
+    width: 100% !important;
+}
+
+.ori-full-height {
+    height: 100vh !important;
+}
+
+.ori-full-parent-height {
+    height: 100% !important;
+}
+
+.ori-full-min-height {
+    min-height: 100vh;
+}
+
+.ori-height-xxs {
+    height: $font-size-xxs;
+}
+
+.ori-height-xs {
+    height: $font-size-xs;
+}
+
+.ori-height-sm {
+    height: $font-size-sm;
+}
+
+.ori-height-md {
+    height: $font-size-md;
+}
+
+.ori-height-lg {
+    height: $font-size-lg;
+}
+
+.ori-height-xxl {
+    height: $font-size-xxl;
+}
+
+.ori-height-40 {
+    height: 40px !important;
+}
+
+.ori-relative {
+    position: relative !important;
+}
+
+.ori-absolute {
+    position: absolute !important;
+}
+
+.ori-align-full {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ori-fixed {
+    position: fixed !important;
+}
+
+.ori-word-break {
+    word-break: break-word !important;
+}
+
+.ori-img-contain {
+    width: 100%;
+    height: 100%;
+}
+
+.ori-border-none {
+    border: none !important;
+}
+
+.ori-l-border-light {
+    border-left: 1px solid $border-light;
+}
+
+.ori-l-border-primary {
+    border-left: 1px solid $primary;
+}
+
+.ori-r-border-light {
+    border-right: 1px solid $border-light;
+}
+
+.ori-b-border-light {
+    border-bottom: 1px solid $border-light;
+}
+
+.ori-t-border-light {
+    border-top: 1px solid $border-light;
+}
+
+.ori-border-light {
+    border: 1px solid $border-light;
+}
+
+.ori-border-primary {
+    border: 1px solid $primary;
+}
+
+.ori-border-radius-1 {
+    border-radius: 1px;
+}
+
+.ori-border-radius-4 {
+    border-radius: 4px;
+}
+
+.ori-border-radius-10 {
+    border-radius: 10px !important;
+}
+
+.ori-border-radius-15 {
+    border-radius: 15px !important;
+}
+
+.ori-border-radius-20 {
+    border-radius: 20px !important;
+}
+
+.ori-border-radius-half {
+    border-radius: 50% !important;
+}
+
+.ori-bubble-border-radius {
+    border-radius: 15px 15px 2px;
+}
+
+.ori-box-shadow-light {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.ori-box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ori-display-block {
+    display: block !important;
+}
+
+.ori-display-none {
+    display: none !important;
+}
+
+.ori-overflow-hidden {
+    overflow: hidden;
+}
+
+.ori-overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.ori-overflow-auto {
+    overflow: auto;
+}
+
+.ori-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.ori-rotate-270 {
+    transform: rotate(270deg);
+}
+
+.ori-transition-half {
+    transition: transform 500ms;
+}
+
+/*---------------------- FONT CLASSES -----------------------*/
+
+.ori-font-thin {
+    font-weight: $font-thin; //300
+}
+
+.ori-font-normal {
+    font-weight: $font-normal; //400
+}
+
+.ori-font-bold {
+    font-weight: $font-bold; //500
+}
+
+.ori-font-ultra-bold {
+    font-weight: $font-ultra-bold; //700
+}
+
+.ori-font-xxs {
+    font-size: $font-size-xxs !important; //10px
+}
+
+.ori-font-11 {
+    font-size: 11px !important; //10px
+}
+
+.ori-font-xs {
+    font-size: $font-size-xs !important; //12px
+}
+
+.ori-font-sm {
+    font-size: $font-size-sm !important; //14px
+}
+
+.ori-font-md {
+    font-size: $font-size-md !important; //16px
+}
+
+.ori-font-18 {
+    font-size: 18px !important; //18px
+}
+
+.ori-font-lg {
+    font-size: $font-size-lg !important; //20px
+}
+
+.ori-font-xl {
+    font-size: $font-size-xl !important; //24px
+}
+
+.ori-font-xxl {
+    font-size: $font-size-xxl !important; //30px
+}
+
+/*---------------------- COMMON FLEX CLASSES --------------------- */
+
+.ori-flex {
+    display: flex;
+}
+
+.ori-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ori-flex-row {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.ori-flex-rr {
+    display: flex !important;
+    flex-direction: row-reverse;
+}
+
+.ori-flex-column {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.ori-flex-cr {
+    display: flex !important;
+    flex-direction: column-reverse;
+}
+
+.ori-flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.ori-flex-ac { //flex-align-center
+    align-items: center;
+}
+
+.ori-flex-jc { //flex-justify-center
+    justify-content: center;
+}
+
+.ori-flex-jsb { //flex-justify-space-between
+    justify-content: space-between;
+}
+
+.ori-flex-jsa { //flex-justify-space-around
+    justify-content: space-around;
+}
+
+.ori-flex-jfe { //flex-justify-flex-end
+    justify-content: flex-end;
+}
+
+.ori-full-flex {
+    flex: 1;
+}
+
+/*---------------------- Custom Tag CLASSES----------------------*/
+
+.ori-custom-tag-green {
+    color: $green;
+    background-color: $green-bg-light;
+}
+
+/*---------------------- COMMON PADDING CLASSES----------------------*/
+//pad -> padding
+//l -> left
+//r -> right
+//t -> top
+//b -> bottom
+
+//---------------- padding-X -------------------
+
+.ori-no-pad {
+    padding: 0px !important;
+}
+
+.ori-pad-5 {
+    padding: 5px !important;
+}
+
+.ori-pad-8 {
+    padding: 8px !important;
+}
+
+.ori-pad-10 {
+    padding: 10px !important;
+}
+
+.ori-pad-15 {
+    padding: 15px !important;
+}
+
+.ori-pad-20 {
+    padding: 20px !important;
+}
+
+//---------------- left-right-padding-X -------------------
+
+.ori-no-lr-pad {
+    @include lr-padding(0px);
+}
+
+.ori-lr-pad-5 {
+    @include lr-padding(5px);
+}
+
+.ori-lr-pad-6 {
+    @include lr-padding(6px);
+}
+
+.ori-lr-pad-10 {
+    @include lr-padding(10px);
+}
+
+.ori-lr-pad-15 {
+    @include lr-padding(15px);
+}
+
+.ori-lr-pad-20 {
+    @include lr-padding(20px);
+}
+
+.ori-lr-pad-40 {
+    @include lr-padding(40px);
+}
+
+//---------------- top-bottom-padding-X --------------------
+
+.ori-no-tb-pad {
+    @include tb-padding(0px);
+}
+
+.ori-tb-pad-1 {
+    @include tb-padding(1px);
+}
+
+.ori-tb-pad-5 {
+    @include tb-padding(5px);
+}
+
+.ori-tb-pad-7 {
+    @include tb-padding(7px);
+}
+
+.ori-tb-pad-10 {
+    @include tb-padding(10px);
+}
+
+.ori-tb-pad-15 {
+    @include tb-padding(15px);
+}
+
+.ori-tb-pad-20 {
+    @include tb-padding(20px);
+}
+
+//----------------- left-padding-X -------------------
+
+.ori-no-l-pad {
+    padding-left: 0px !important;
+}
+
+.ori-l-pad-2 {
+    padding-left: 2px !important;
+}
+
+.ori-l-pad-5 {
+    padding-left: 5px !important;
+}
+
+.ori-l-pad-10 {
+    padding-left: 10px !important;
+}
+
+.ori-l-pad-15 {
+    padding-left: 15px !important;
+}
+
+//----------------- right-padding-X -------------------
+
+.ori-no-r-pad {
+    padding-right: 0px !important;
+}
+
+.ori-r-pad-3 {
+    padding-right: 3px !important;
+}
+
+.ori-r-pad-5 {
+    padding-right: 5px;
+}
+
+.ori-r-pad-10 {
+    padding-right: 10px;
+}
+
+.ori-r-pad-30 {
+    padding-right: 30px;
+}
+
+//----------------- top-padding-X -------------------
+
+.ori-no-t-pad {
+    padding-top: 0px !important;
+}
+
+.ori-t-pad-3 {
+    padding-top: 3px;
+}
+
+.ori-t-pad-5 {
+    padding-top: 5px;
+}
+
+.ori-t-pad-10 {
+    padding-top: 10px;
+}
+
+.ori-t-pad-15 {
+    padding-top: 15px;
+}
+
+.ori-t-pad-20 {
+    padding-top: 20px;
+}
+
+//----------------- bottom-padding-X -------------------
+
+.ori-no-b-pad {
+    padding-bottom: 0px !important;
+}
+
+.ori-b-pad-5 {
+    padding-bottom: 5px !important;
+}
+
+.ori-b-pad-10 {
+    padding-bottom: 10px !important;
+}
+
+.ori-b-pad-15 {
+    padding-bottom: 15px !important;
+}
+
+.ori-b-pad-40 {
+    padding-bottom: 40px !important;
+}
+
+/*---------------------------- COMMON MARGIN CLASSES-----------------------------*/
+//mrgn -> margin
+//l -> left
+//r -> right
+//t -> top
+//b -> bottom
+
+//----------------------- margin-X -------------------------
+
+.ori-no-mrgn {
+    margin: 0px !important;
+}
+
+.ori-mrgn-10 {
+    margin: 10px;
+}
+
+.ori-mrgn-20 {
+    margin: 20px;
+}
+
+//---------------- left-right-margin-X -------------------
+
+.ori-no-lr-mrgn {
+    @include lr-margin(0px);
+}
+
+.ori-lr-mrgn-5 {
+    @include lr-margin(5px);
+}
+
+.ori-lr-mrgn-15 {
+    @include lr-margin(15px);
+}
+
+//---------------- top-bottom-margin-X --------------------
+
+.ori-no-tb-mrgn {
+    @include tb-margin(0px);
+}
+
+.ori-tb-mrgn-5 {
+    @include tb-margin(5px);
+}
+
+//------------------- left-margin-X ---------------------
+
+.ori-no-l-mrgn {
+    margin-left: 0px !important;
+}
+
+.ori-l-mrgn-5 {
+    margin-left: 5px !important;
+}
+
+.ori-l-mrgn-10 {
+    margin-left: 10px;
+}
+
+.ori-l-mrgn-15 {
+    margin-left: 15px;
+}
+
+//-------------------- right-margin-X ---------------------
+
+.ori-no-r-mrgn {
+    margin-right: 0px !important;
+}
+
+.ori-r-mrgn-3 {
+    margin-right: 3px !important;
+}
+
+.ori-r-mrgn-5 {
+    margin-right: 5px !important;
+}
+
+.ori-r-mrgn-10 {
+    margin-right: 10px !important;
+}
+
+.ori-r-mrgn-15 {
+    margin-right: 15px;
+}
+
+.ori-r-mrgn-20 {
+    margin-right: 20px;
+}
+
+//----------------------- top-margin-X ----------------------
+
+.ori-no-t-mrgn {
+    margin-top: 0px !important;
+}
+
+.ori-t-mrgn-10 {
+    margin-top: 10px;
+}
+
+.ori-t-mrgn-20 {
+    margin-top: 20px;
+}
+
+//------------------------- bottom-margin-X -----------------------
+
+.ori-no-b-mrgn {
+    margin-bottom: 0px !important;
+}
+
+.ori-b-mrgn-4 {
+    margin-bottom: 4px;
+}
+
+.ori-b-mrgn-5 {
+    margin-bottom: 5px;
+}
+
+.ori-b-mrgn-10 {
+    margin-bottom: 10px;
+}
+
+.ori-b-mrgn-15 {
+    margin-bottom: 15px;
+}
+
+.ori-b-mrgn-20 {
+    margin-bottom: 20px !important;
+}
+
+//---------------------------- entity specific css --------------------
+
+.entity-0 {
+    background-color: $magenta !important;
+}
+
+.entity-1 {
+    background-color: $green !important;
+}
+
+.entity-2 {
+    background-color: $warning !important;
+}
+
+.entity-3 {
+    background-color: $danger !important;
+}
+
+.entity-4 {
+    background-color: $info !important;
+}
+
+.entity-5 {
+    background-color: $red !important;
+}
+
+//---------------------------- mobile specific css --------------------
+
+@media only screen and (max-width: 767px) {
+    .ori-mobile-hidden {
+        display: none !important;
+    }
+
+    .ori-mobile-pad-5 {
+        padding-bottom: 5px;
+    }
+}
+
+//--------------------------- desktop specific css -----------------------
+
+@media only screen and (min-width: 768px) {
+    .ori-desktop-hidden {
+        display: none !important;
+    }
+}
+
+//-------------------- special css : dont use it directly --------------------
+
+.ori-zindex-150 {
+    z-index: 150;
+}
+
+.ori-align-avatar-letter { // to fix avatar letter align  issue
+    .ant-avatar-string {
+        position: unset !important;
+        transform: scale(1) !important;
+        text-align: center;
+    }
+}
+
